@@ -1,0 +1,11 @@
+@import "../../Resourse/Css/global.scss";
+
+.globalFooter {
+    background-color: $emperor;
+    padding: 15px;
+    text-align: center;
+    color: $white;
+    p {
+        @include bodyText;
+    }
+}

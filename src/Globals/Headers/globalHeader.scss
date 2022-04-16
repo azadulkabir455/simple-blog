@@ -1,0 +1,64 @@
+@import "../../Resourse/Css/global.scss";
+
+.banner {
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+    justify-content: center;
+    text-align:center;
+    position: relative;
+    background: url("../../Resourse/Images/header.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left:0;
+        right:0;
+        background-color: transparentize($coldGray, .3);
+        z-index: 0;
+    }
+    .headerContent {
+        z-index: 3;
+        h2 {
+            @include h2;
+        }
+        p {
+            @include bodyText;
+            max-width: 850px;
+            margin: 8px auto 24px;
+
+        }
+        button {
+            background-color: transparentize($emperor, .5);
+            border: 1px solid $ronchy;
+            transition: all .3s ease-in-out;
+            &:hover {
+                background-color: $ronchy;
+            }
+            a {
+                @include buttonText {
+                    text-decoration: none;
+                    color: $ronchy;
+                    &:hover {
+                        color: $emperor;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+.navbar {
+    padding: 0;
+    .navbar-brand img {
+        width: 80px;
+        height: auto;
+        filter: invert(100%)
+    }
+}

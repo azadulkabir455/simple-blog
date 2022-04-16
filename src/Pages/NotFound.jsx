@@ -1,9 +1,14 @@
 import React from 'react';
+import Globalheaders from '../Globals/Headers/GlobalHeaders';
+import GlobalFooter from "../Globals/Footers/globalFooter"
 
 const Notfound = () => {
     return (
         <>
-           <h1>Not found page</h1> 
+           <Globalheaders 
+            title="Page not Found"
+           />
+           <GlobalFooter />
         </>
     );
 }

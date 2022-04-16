@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+$titleFont: 'Oswald', sans-serif;
+$bodyFont: 'Poppins', sans-serif;
+$coldGray: #181818;
+$emperor: #181818;
+$silverSand: #C3C7CA;
+$froly: #F26869;
+$ronchy: #EFBD61;
+$white: #fff;
+$transparent: rgba(255, 255, 255, 0);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::selection {
+    background-color: #181818;
+    color: $white;
+}
+body {
+    font-family: $bodyFont;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+// Scrollbar css 
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+   
+body::-webkit-scrollbar-track {
+background-color: $froly;
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: $coldGray;
+}
+
+
+
+@mixin h2 {
+    font-family: $titleFont;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 90px;
+    text-transform: capitalize;
+    @content;
+    @media only screen and (max-width: 1024px) {
+        font-size: 42px;
+        line-height: 48px; 
+    }
+    @media only screen and (max-width: 768px) {
+        font-size: 32px;
+        line-height: 36px; 
+    }
+}
+@mixin h3 {
+    font-family: $titleFont;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: capitalize;
+    @content;
+    @media only screen and (max-width: 1024px) {
+        font-size: 36px;
+        line-height: 42px; 
+    }
+    @media only screen and (max-width: 768px) {
+        font-size: 28px;
+        line-height: 36px; 
+    }
+}
+@mixin buttonText {
+    font-family: $bodyFont;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    text-transform: uppercase;
+    letter-spacing: .25px;
+    @content;
+    @media only screen and (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 26px; 
+    }
+    @media only screen and (max-width: 768px) {
+        font-size: 16px;
+        line-height: 24px; 
+        letter-spacing: .5px;
+    }
+}
+@mixin preHeaderText {
+    font-family: $titleFont;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    @content;
+    @media only screen and (max-width: 1024px) {
+        font-size: 14px;
+        line-height: 22px; 
+    }
+    @media only screen and (max-width: 768px) {
+        font-size: 12px;
+        line-height: 18px; 
+    }
+}
+@mixin bodyText {
+    font-family: $bodyFont;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: normal;
+    @content;
+    @media only screen and (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 28px; 
+    }
+    @media only screen and (max-width: 768px) {
+        font-size: 16px;
+        line-height: 24px; 
+    }
+}
