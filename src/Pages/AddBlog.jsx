@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Globalform from '../Globals/Forms/GlobalForm';
 
 const Addblog = () => {
     return (
         <>
-            <h1>Hello addblog</h1>
+            <Globalform type={true}/>
         </>
     );
 }
