@@ -11,6 +11,7 @@ const FormInfo = (props) => {
     const [errPhone, setErrPhone] = useState("");
     const [desc, setDesc] = useState('');
     const [errDesc, setErrDesc] = useState('');
+    const [blogId, setBlogId] = useState();
 
     const formHandler = (submitValue) => {
         if((name && email && phone && desc) && (!errName && !errEmail && !errPhone && !errDesc)) {
@@ -60,7 +61,9 @@ const FormInfo = (props) => {
         }
         setDesc(inputValue)
     }
-
+    const idHandler = (inputValue) => {
+        setBlogId(inputValue)
+    }
     
     const saveData = () => {
         if(!name) {
@@ -91,7 +94,32 @@ const FormInfo = (props) => {
         })
     }
     const updateData = () => {
-        alert("hi")
+        if(!name) {
+            setErrName("Name must be filled");
+        }
+        if(!phone) {
+            setErrPhone("Phone must be filled");
+        }
+        if(!email) {
+            setErrEmail("Email must be filled");
+        }
+        if(!desc) {
+            setErrDesc("Details Must be filled")
+        }
+        let items = {name, email, phone, desc, blogId};
+        fetch(`http://localhost:3001/comments/${blogId}`, {
+            method:"PUT",
+            headers: {
+                "Accept":"application/json",
+                "Content-type":"application/json"
+            },
+            body: JSON.stringify(items)
+        }).then((res) => {
+            res.json().then((data) => {
+               
+            })
+        })
+
     }
 
     return(
@@ -109,6 +137,7 @@ const FormInfo = (props) => {
             phoneHandler,
             descHandler,
             formHandler,
+            idHandler,
             saveData,
             updateData
         }}>
