@@ -7,8 +7,9 @@ import Globalheaders from '../Globals/Headers/GlobalHeaders';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
+    console.log(blogs)
     const [blogPage, setBlogPage] = useState();
-    let blogItems = 6
+    let blogItems = 6;
     useEffect(() => {
         getBlogs();
     }, [])
