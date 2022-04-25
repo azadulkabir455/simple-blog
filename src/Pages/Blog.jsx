@@ -7,20 +7,27 @@ import Globalheaders from '../Globals/Headers/GlobalHeaders';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
-    console.log(blogs)
+    const [filterBlogs,setFilterBlogs] = useState([])
     const [blogPage, setBlogPage] = useState();
     let blogItems = 6;
     useEffect(() => {
         getBlogs();
-    }, [])
+    }, []);
     const getBlogs = () => {
         fetch(`http://localhost:3001/comments?_page=1&_limit=${blogItems}`).then((res) => {
             res.json().then((data) => {
                 let totalBlogs = res.headers.get("x-total-count");
                 setBlogPage(Math.ceil(totalBlogs/blogItems));
-                setBlogs(data)
+                setBlogs(data);
+                setFilterBlogs(data);
             })
         })
+    }
+    const filterResult = (blogItem) => {
+        const result = filterBlogs.filter((blogcat) => {
+            return blogcat.category === blogItem;
+        });
+        setBlogs(result);
     }
     const fetchBlogs = async (currentPage) => {
      const res = await fetch(`http://localhost:3001/comments?_page=${currentPage}&_limit=${blogItems}`);
@@ -41,6 +48,9 @@ const Blog = () => {
             />
             <div className="blogArchive">
                 <Container>
+                    <button onClick={() => filterResult("simple")}>Simple</button>
+                    <button onClick={() => filterResult("hard")}>Hard</button>
+                    <button onClick={() => setBlogs(filterBlogs)}>All</button>
                     <Row>
                         {
                             blogs.map((item) =>
@@ -52,6 +62,7 @@ const Blog = () => {
                                                 {item.phone}
                                                 {item.email}
                                             </div>
+                                            <div className="category">{item.category}</div>
                                         </Card.Header>
                                         <Card.Body>
                                             <Card.Text>

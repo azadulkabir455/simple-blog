@@ -5,50 +5,64 @@
       "email": "azadulkabir@gmail.com",
       "phone": "01704337027",
       "desc": "Holisticly productize orthogonal results rather than exceptional human capital. Intrinsicly productize superior e-commerce after innovative intellectual capital. Credibly re-engineer e-business potentialities through goal-oriented expertise. Proactively reinvent client-centered infrastructures rather than end-to-end relationships. Authoritatively.",
-      "blogId": 1,
-      "id": 1
+      "id": 1,
+      "category": "simple"
     },
     {
       "name": "Anglfy",
       "phone": "01704992025",
       "email": "angfly@gmail.com",
       "desc": "Quickly envisioneer cross-platform resources vis-a-vis error-free deliverables. Compellingly synthesize timely information without resource-leveling e-business. Rapidiously harness world-class process improvements for extensible leadership.",
-      "id": 2
+      "id": 2,
+      "category": "simple"
     },
     {
       "name": "Fatusu",
       "phone": "01704992025",
       "email": "fatusu@gmail.com",
       "desc": "Quickly envisioneer cross-platform resources vis-a-vis error-free deliverables. Compellingly synthesize timely information without resource-leveling e-business. Rapidiously harness world-class process improvements for extensible leadership.",
-      "id": 3
+      "id": 3,
+      "category": "simple"
     },
     {
       "name": "Kabir khan",
       "phone": "01704992025",
       "email": "kabir@gmail.com",
       "desc": "Quickly envisioneer cross-platform resources vis-a-vis error-free deliverables. Compellingly synthesize timely information without resource-leveling e-business. Rapidiously harness world-class process improvements for extensible leadership.",
-      "id": 4
+      "id": 4,
+      "category": "hard"
     },
     {
       "name": "Akash",
       "phone": "01704992025",
       "email": "akash@gmail.com",
       "desc": "Quickly envisioneer cross-platform resources vis-a-vis error-free deliverables. Compellingly synthesize timely information without resource-leveling e-business. Rapidiously harness world-class process improvements for extensible leadership.",
-      "id": 5
+      "id": 5,
+      "category": "hard"
     },
     {
       "name": "Sultana",
       "phone": "01704992025",
       "email": "sultana@gmail.com",
       "desc": "Quickly envisioneer cross-platform resources vis-a-vis error-free deliverables. Compellingly synthesize timely information without resource-leveling e-business. Rapidiously harness world-class process improvements for extensible leadership.",
-      "id": 6
+      "id": 6,
+      "category": "hard"
     },
     {
       "name": "Vulu ram",
       "phone": "01789966545",
       "email": "vulu@gmail.com",
       "desc": "Dramatically reinvent performance based niches for inexpensive niches. Dramatically productivate premium deliverables rather than principle-centered infomediaries. Proactively productivate intermandated markets through professional.",
-      "id": 7
+      "id": 7,
+      "category": "hard"
+    },
+    {
+      "name": "Vulu ram",
+      "phone": "01789966545",
+      "email": "vulu@gmail.com",
+      "desc": "Dramatically reinvent performance based niches for inexpensive niches. Dramatically productivate premium deliverables rather than principle-centered infomediaries. Proactively productivate intermandated markets through professional.",
+      "id": 8,
+      "category": "hard"
     }
   ]
 }
