@@ -42,7 +42,7 @@ const Blog = () => {
         setBlogs(pagePerBlogs)
     }
     const limitWord = (word) => {
-        let limitWord = word.slice(0, 150);
+        let limitWord = word.slice(0, 135);
         return limitWord;
     }
     return (
@@ -53,6 +53,7 @@ const Blog = () => {
             />
             <div className="blogArchive">
                 <Container>
+                    <div className="filterArea">
                     <div className="searchInput">
                         <input 
                         type="text"
@@ -67,6 +68,7 @@ const Blog = () => {
                         <button onClick={() => filterResult("hard")}>Hard</button>
                         <button onClick={() => setBlogs(filterBlogs)}>All</button>
                     </div>
+                    </div>
                     <Row>
                         {
                             blogs.filter((blogItem) => {
@@ -80,13 +82,13 @@ const Blog = () => {
                                     return blogItem;
                                 }
                             }).map((item) =>
-                                <Col xs={4} key={item.id}>
+                                <Col xs={4} key={item.id} className="blogCards">
                                     <Card key={item.id}>
                                         <Card.Header as="h5">
                                             {item.name}
                                             <div className="contactInfo">
-                                                {item.phone}
-                                                {item.email}
+                                                <span>{item.phone}</span>
+                                                <span>{item.email}</span>
                                             </div>
                                             <div className="category">{item.category}</div>
                                         </Card.Header>

@@ -2,27 +2,101 @@
 
 .blogArchive {
     padding: 120px 0;
-    .filterButton {
+    .filterArea {
         display: flex;
-        justify-content: right;
-        margin-bottom: 30px;
-        button {
+        justify-content: space-between;
+        align-items: center;
+
+        .filterButton {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            button {
+                @include buttonText;
+                font-size: 14px;
+                background-color: $froly;
+                color: $emperor;
+                width: 80px;
+                height: 35px;
+                border:none;
+                border-radius: 50px;
+                cursor: pointer;
+                box-sizing: border-box;
+                transition: all .2s linear;
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+                &:hover {
+                    background-color: darken($froly, 10);
+                }
+            }
+        }
+        .searchInput input{
+            width: 250px;
+            height: 35px;
+            padding: 5px 15px; 
+            border-radius: 50px;
+            border: 1px solid $froly;
             @include buttonText;
             font-size: 14px;
-            background-color: $froly;
-            color: $emperor;
-            width: 80px;
-            height: 35px;
-            border:none;
-            border-radius: 50px;
-            cursor: pointer;
-            box-sizing: border-box;
-            transition: all .2s linear;
-            &:not(:last-child) {
-                margin-right: 10px;
+        }
+    }
+    .blogCards {
+        margin-top: 30px;
+        .card {
+            border: 2px solid $froly;
+            display: flex;
+            align-items: stretch;
+            .card-header {
+                background-color: $silverSand;
+                padding: 15px;
+                @include h3;
+                font-size: 28px;
+                color: $emperor;
+                position:relative;
+                .contactInfo {
+                    margin-top: 14px;
+                    span {
+                        display: block;
+                        font-size: 14px;
+                        line-height: 21px;
+                        font-weight: 400;
+                        color: $froly;
+                    }
+                }
+                .category {
+                    display: inline-block;
+                    padding: 6px 22px;
+                    border-radius: 50px;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: $emperor;
+                    background-color: $ronchy;
+                    position:absolute;
+                    right: 15px;
+                    bottom: -12px;
+                }
             }
-            &:hover {
-                background-color: darken($froly, 10);
+            .card-body {
+                .card-text {
+                    @include bodyText;
+                    color: $emperor;
+                    padding: 15px 0px;
+                    transition: all .33s linear;
+                }
+                button {
+                    background-color: $emperor;
+                    border:none;
+                    border-radius: 50px;
+                    margin-bottom: 10px;
+                    &:hover {
+                        background-color: darken( $emperor, 10);
+                    }
+                    a{
+                        color: $white;
+                        text-decoration: none;
+                    }
+                }
             }
         }
     }
