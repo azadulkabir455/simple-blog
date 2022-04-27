@@ -1,0 +1,29 @@
+@import '../../Resourse/Css/global.scss';
+
+.blogArchive {
+    padding: 120px 0;
+    .filterButton {
+        display: flex;
+        justify-content: right;
+        margin-bottom: 30px;
+        button {
+            @include buttonText;
+            font-size: 14px;
+            background-color: $froly;
+            color: $emperor;
+            width: 80px;
+            height: 35px;
+            border:none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: all .2s linear;
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+            &:hover {
+                background-color: darken($froly, 10);
+            }
+        }
+    }
+}
