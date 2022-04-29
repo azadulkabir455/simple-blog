@@ -128,3 +128,41 @@ background-color: $coldGray;
         line-height: 24px; 
     }
 }
+
+// Pagination CSS
+
+.pagination {
+    display:flex;
+    justify-content: center;
+    margin-top:60px;
+    ul {
+        list-style: none;
+        padding:0;
+        margin:0;
+        display: flex;
+        li {
+            padding: 8px 16px;
+            margin: 0 3px;
+            background-color: $ronchy;
+            @include bodyText;
+            transition: all .3s linear;
+            color: $emperor;
+            cursor:pointer;
+            &:hover:not(.disabled) {
+                background-color: $froly;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+                cursor:inherit;
+            }
+        }
+        .selected {
+            background-color: $froly;
+        }
+        .disabled {
+            background-color: lighten($ronchy, 10);
+            cursor: not-allowed;
+        }
+    }
+}

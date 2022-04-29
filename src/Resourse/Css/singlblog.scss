@@ -1,0 +1,38 @@
+@import "../Css/global.scss";
+
+.singleBlog {
+    padding: 120px 0;
+    .card {
+        background-color: $silverSand;
+        border-radius: 4px;
+        border:none;
+        box-shadow: 1px 2px 7px #ddd;
+        h2 {
+            padding: 40px 65px;
+            border-radius: 100px;
+            background-color: $ronchy;
+            display: inline-block;
+            @include h2;
+            color: $coldGray;
+        }
+        .contact {
+            padding: 10px 20px 20px 30px;
+            h3 {
+                @include h3;
+                margin: 8px 0 22px;
+                color: $emperor;
+            }
+            span {
+                display: block;
+                @include bodyText;
+                color: $froly;
+            }
+        }
+    }
+    p {
+        @include bodyText;
+        color: $emperor;
+        padding-left: 30px;
+    }
+
+}

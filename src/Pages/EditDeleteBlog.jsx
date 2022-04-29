@@ -23,7 +23,7 @@ const Editdeleteblog = () => {
 
     useEffect(() => {
         getBlogs();
-    }, [blogItems]);
+    }, [blogItems,blogs]);
 
     const getBlogs = () => {
         fetch(`http://localhost:3001/comments?_page=1&_limit=${blogItems}`).then((res) => {
@@ -84,7 +84,8 @@ const Editdeleteblog = () => {
                                     </Card>
                                 )
                             }
-                            <ReactPaginate
+                           <div className="pagination">
+                           <ReactPaginate
                                 breakLabel={"..."}
                                 nextLabel={">>"}
                                 previousLabel={"<<"}
@@ -93,6 +94,7 @@ const Editdeleteblog = () => {
                                 pageRangeDisplayed={3}
                                 onPageChange={paginateHandler}
                             />
+                           </div>
                         </Col>
                     </Row>
                 </Container>

@@ -106,6 +106,7 @@ const Blog = () => {
                         }
                     </Row>
 
+                    <div className="pagination">
                     <ReactPaginate
                         breakLabel="..."
                         nextLabel=" >"
@@ -116,6 +117,7 @@ const Blog = () => {
                         pageCount={blogPage}
 
                     />
+                    </div>
                 </Container>
             </div>
             <Globalfooter />
